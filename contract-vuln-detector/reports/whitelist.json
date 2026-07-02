@@ -1,0 +1,1490 @@
+{
+  "bsc:0x96ba9413a83b95eb9f28c2d002ec136bdf8e10f6": {
+    "address": "0x96ba9413a83b95eb9f28c2d002ec136bdf8e10f6",
+    "chain": "bsc",
+    "contract_name": "AspBsc",
+    "added_at": "2026-07-02T13:37:52.032492",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:1, medium:13"
+  },
+  "bsc:0x000ae314e2a2172a039b26378814c252734f556a": {
+    "address": "0x000ae314e2a2172a039b26378814c252734f556a",
+    "chain": "bsc",
+    "contract_name": "AsterToken",
+    "added_at": "2026-07-02T13:37:52.034534",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:6, medium:30"
+  },
+  "bsc:0x55d398326f99059ff775485246999027b3197955": {
+    "address": "0x55d398326f99059ff775485246999027b3197955",
+    "chain": "bsc",
+    "contract_name": "BEP20USDT",
+    "added_at": "2026-07-02T13:37:52.035979",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:1, medium:26"
+  },
+  "bsc:0xb300000b72deaeb607a12d5f54773d1c19c7028d": {
+    "address": "0xb300000b72deaeb607a12d5f54773d1c19c7028d",
+    "chain": "bsc",
+    "contract_name": "Diamond",
+    "added_at": "2026-07-02T13:37:52.038791",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:2, low:6, medium:2"
+  },
+  "bsc:0x62fef78d9ec47e85c79a7f47b50bdff927f9809f": {
+    "address": "0x62fef78d9ec47e85c79a7f47b50bdff927f9809f",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T13:37:52.041046",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:2, low:13, medium:6"
+  },
+  "bsc:0xe0e6b7303431a0575b7d867da6d6f0685c02096b": {
+    "address": "0xe0e6b7303431a0575b7d867da6d6f0685c02096b",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T13:37:52.043245",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:3, low:4, medium:3"
+  },
+  "bsc:0xf291a67165d751a2e7b4da4f0a012449eef0a279": {
+    "address": "0xf291a67165d751a2e7b4da4f0a012449eef0a279",
+    "chain": "bsc",
+    "contract_name": "FeeModuleV3",
+    "added_at": "2026-07-02T13:37:52.047493",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:12, medium:23"
+  },
+  "bsc:0x773ab0f4bc5f842990afd126788b7b9914a42195": {
+    "address": "0x773ab0f4bc5f842990afd126788b7b9914a42195",
+    "chain": "bsc",
+    "contract_name": "MARAToken",
+    "added_at": "2026-07-02T13:37:52.055377",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:14, medium:50"
+  },
+  "bsc:0x0989942f8e5b778e804858a0cc791b4469a5fd63": {
+    "address": "0x0989942f8e5b778e804858a0cc791b4469a5fd63",
+    "chain": "bsc",
+    "contract_name": "NegRiskFeeModuleV3",
+    "added_at": "2026-07-02T13:37:52.059904",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:12, medium:31"
+  },
+  "bsc:0x10ed43c718714eb63d5aa57b78b54704e256024e": {
+    "address": "0x10ed43c718714eb63d5aa57b78b54704e256024e",
+    "chain": "bsc",
+    "contract_name": "PancakeRouter",
+    "added_at": "2026-07-02T13:37:52.065842",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:5, medium:56"
+  },
+  "bsc:0x07964f135f276412b3182a3b2407b8dd45000000": {
+    "address": "0x07964f135f276412b3182a3b2407b8dd45000000",
+    "chain": "bsc",
+    "contract_name": "TransitSwapRouterV5",
+    "added_at": "2026-07-02T13:37:52.080100",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:8, medium:50"
+  },
+  "bsc:0x1de460f363af910f51726def188f9004276bf4bc": {
+    "address": "0x1de460f363af910f51726def188f9004276bf4bc",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T13:37:52.084989",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x20042403d6e98a393b0d51a1e4a871637dc573b0": {
+    "address": "0x20042403d6e98a393b0d51a1e4a871637dc573b0",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T13:37:52.086255",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "bsc:0x090e6c588e4a57bc927541c2cec71cc9858218df": {
+    "address": "0x090e6c588e4a57bc927541c2cec71cc9858218df",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T13:37:52.089460",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "polygon:0x2791bca1f2de4661ed88a30c99a7a9449aa84174": {
+    "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+    "chain": "polygon",
+    "contract_name": "UChildERC20Proxy",
+    "added_at": "2026-07-02T13:37:52.092628",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:1, low:10, medium:9"
+  },
+  "bsc:0xd9c500dff816a1da21a48a732d3498bf09dc9aeb": {
+    "address": "0xd9c500dff816a1da21a48a732d3498bf09dc9aeb",
+    "chain": "bsc",
+    "contract_name": "UniversalRouter",
+    "added_at": "2026-07-02T13:37:52.115463",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:65, medium:165"
+  },
+  "bsc:0x5c4a6903732532eeb3ae0803e062d8ae25d52bd1": {
+    "address": "0x5c4a6903732532eeb3ae0803e062d8ae25d52bd1",
+    "chain": "bsc",
+    "contract_name": "Vault",
+    "added_at": "2026-07-02T13:37:52.121553",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "low:25, medium:65"
+  },
+  "bsc:0x578d99acaeffa1e6de4750749f5dfd4a0ddb3024": {
+    "address": "0x578d99acaeffa1e6de4750749f5dfd4a0ddb3024",
+    "chain": "bsc",
+    "contract_name": "Withdraw",
+    "added_at": "2026-07-02T13:37:52.125001",
+    "reason": "Manual whitelist after report validation",
+    "scan_summary": "high:1, low:6, medium:10"
+  },
+  "bsc:0xdb1a1c98f4a23c8c78b7b2c44cd9678ff286a0a1": {
+    "address": "0xdb1a1c98f4a23c8c78b7b2c44cd9678ff286a0a1",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T14:34:50.198047",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0x57b13a7e18d7382f2ce754ff112b2f552230b83e": {
+    "address": "0x57b13a7e18d7382f2ce754ff112b2f552230b83e",
+    "chain": "bsc",
+    "contract_name": "NTVAToken",
+    "added_at": "2026-07-02T14:34:50.202087",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:24"
+  },
+  "bsc:0x3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5": {
+    "address": "0x3131f6b80c26936ab03f7d9d29eb4ddf36ac3fb5",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.207824",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:15, medium:11"
+  },
+  "bsc:0xe6378926bab18f4d80caf3fee5bb738a55e37777": {
+    "address": "0xe6378926bab18f4d80caf3fee5bb738a55e37777",
+    "chain": "bsc",
+    "contract_name": "FlapTaxTokenV3",
+    "added_at": "2026-07-02T14:34:50.228798",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:17, medium:108"
+  },
+  "bsc:0x083cbf918f43472917ca0dcbd254b25b74fb2e2f": {
+    "address": "0x083cbf918f43472917ca0dcbd254b25b74fb2e2f",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.233182",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0xe0a281deff5c9d8d67af09d39340e134ac81b82e": {
+    "address": "0xe0a281deff5c9d8d67af09d39340e134ac81b82e",
+    "chain": "bsc",
+    "contract_name": "wkeyDAO2",
+    "added_at": "2026-07-02T14:34:50.243135",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:6, medium:36"
+  },
+  "bsc:0xbcbe0856193c2d8f0302b64a04c74dfe972f83ce": {
+    "address": "0xbcbe0856193c2d8f0302b64a04c74dfe972f83ce",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.249187",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x32fcd1e679c45094d35f5546b3829296b2b920c9": {
+    "address": "0x32fcd1e679c45094d35f5546b3829296b2b920c9",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.254784",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xf35553305656ed6f9c9f2b09d1da6976a1bded1c": {
+    "address": "0xf35553305656ed6f9c9f2b09d1da6976a1bded1c",
+    "chain": "bsc",
+    "contract_name": "TigerNFT",
+    "added_at": "2026-07-02T14:34:50.259034",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:1, medium:22"
+  },
+  "bsc:0x850026ad9ece0505a45148b843cc338a77405555": {
+    "address": "0x850026ad9ece0505a45148b843cc338a77405555",
+    "chain": "bsc",
+    "contract_name": "FIFTHToken",
+    "added_at": "2026-07-02T14:34:50.269946",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:18, medium:51"
+  },
+  "bsc:0x56c1967519c27f63a6ce8caa3cf616bb516f3b44": {
+    "address": "0x56c1967519c27f63a6ce8caa3cf616bb516f3b44",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.275069",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0xffca9396dccb8d6288e770d4e9e211e722f479a4": {
+    "address": "0xffca9396dccb8d6288e770d4e9e211e722f479a4",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.280043",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x348be44f63a458be9c1b13d6fd8e99048f297bc3": {
+    "address": "0x348be44f63a458be9c1b13d6fd8e99048f297bc3",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.286088",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:5"
+  },
+  "bsc:0x60322971a672b81bcce5947706d22c19daecf6fb": {
+    "address": "0x60322971a672b81bcce5947706d22c19daecf6fb",
+    "chain": "bsc",
+    "contract_name": "MarsDAO",
+    "added_at": "2026-07-02T14:34:50.290817",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:5, medium:10"
+  },
+  "bsc:0x544028231562a43b106fbceca722b65cb5c861b0": {
+    "address": "0x544028231562a43b106fbceca722b65cb5c861b0",
+    "chain": "bsc",
+    "contract_name": "OLY",
+    "added_at": "2026-07-02T14:34:50.294772",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:33"
+  },
+  "bsc:0x8d65744527f55d0b2338350912d5c99a81ddf0e2": {
+    "address": "0x8d65744527f55d0b2338350912d5c99a81ddf0e2",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.299839",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:3, medium:25"
+  },
+  "bsc:0xacbf546bc90a1df9108a216846b6509e63cf6f7b": {
+    "address": "0xacbf546bc90a1df9108a216846b6509e63cf6f7b",
+    "chain": "bsc",
+    "contract_name": "OdyTransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.304467",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:11"
+  },
+  "bsc:0xd98492fdc4b1853051dc251638dda05fd2ea0788": {
+    "address": "0xd98492fdc4b1853051dc251638dda05fd2ea0788",
+    "chain": "bsc",
+    "contract_name": "WrappedToken",
+    "added_at": "2026-07-02T14:34:50.309183",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:25"
+  },
+  "bsc:0x6a7054e68b9335c31b75a4c67d2d6b5c819119b1": {
+    "address": "0x6a7054e68b9335c31b75a4c67d2d6b5c819119b1",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.310903",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:5, medium:11"
+  },
+  "bsc:0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+    "chain": "bsc",
+    "contract_name": "WBNB",
+    "added_at": "2026-07-02T14:34:50.315640",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:2, medium:6"
+  },
+  "bsc:0xf87c2e9f08c04f805d15c5e90273227639151860": {
+    "address": "0xf87c2e9f08c04f805d15c5e90273227639151860",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T14:34:50.319101",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0x33b41fe18d3a39046ad672f8a0c8c415454f629c": {
+    "address": "0x33b41fe18d3a39046ad672f8a0c8c415454f629c",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.324308",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:14, medium:12"
+  },
+  "bsc:0x46a15b0b27311cedf172ab29e4f4766fbe7f4364": {
+    "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+    "chain": "bsc",
+    "contract_name": "NonfungiblePositionManager",
+    "added_at": "2026-07-02T14:34:50.353190",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:51, medium:92"
+  },
+  "bsc:0x61bb71442749d13a4bb7257dfbfff0452ae937f9": {
+    "address": "0x61bb71442749d13a4bb7257dfbfff0452ae937f9",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.359885",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:2"
+  },
+  "bsc:0xbb4fbe7e80f1d4c0e06428f80b4f26d9ee24b5d0": {
+    "address": "0xbb4fbe7e80f1d4c0e06428f80b4f26d9ee24b5d0",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.377729",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:14, medium:47"
+  },
+  "bsc:0x6413734f92248d4b29ae35883290bd93212654dc": {
+    "address": "0x6413734f92248d4b29ae35883290bd93212654dc",
+    "chain": "bsc",
+    "contract_name": "ConditionalTokens",
+    "added_at": "2026-07-02T14:34:50.385085",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:12, medium:50"
+  },
+  "bsc:0x13f4ea83d0bd40e75c8222255bc855a974568dd4": {
+    "address": "0x13f4ea83d0bd40e75c8222255bc855a974568dd4",
+    "chain": "bsc",
+    "contract_name": "SmartRouter",
+    "added_at": "2026-07-02T14:34:50.402860",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:50, medium:142"
+  },
+  "bsc:0x5c79ef6951a8ff50fffd69cf28b0d63751b576c9": {
+    "address": "0x5c79ef6951a8ff50fffd69cf28b0d63751b576c9",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.406050",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xdbb5cf12408a3ac17d668037ce289f9ea75439d7": {
+    "address": "0xdbb5cf12408a3ac17d668037ce289f9ea75439d7",
+    "chain": "bsc",
+    "contract_name": "WorldMobileToken",
+    "added_at": "2026-07-02T14:34:50.414298",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:20, medium:38"
+  },
+  "bsc:0x289cd3eca9ed89d3bc990dff148f04196e207777": {
+    "address": "0x289cd3eca9ed89d3bc990dff148f04196e207777",
+    "chain": "bsc",
+    "contract_name": "FlapTaxTokenV3",
+    "added_at": "2026-07-02T14:34:50.426017",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:17, medium:108"
+  },
+  "bsc:0x124763985d17ce87d1791015f632dc04fd5bc30f": {
+    "address": "0x124763985d17ce87d1791015f632dc04fd5bc30f",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.429556",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0xa66ec8f5d278d3949826fc8d68bb34b08b516d98": {
+    "address": "0xa66ec8f5d278d3949826fc8d68bb34b08b516d98",
+    "chain": "bsc",
+    "contract_name": "PHX",
+    "added_at": "2026-07-02T14:34:50.435508",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:3, medium:40"
+  },
+  "bsc:0x305465442ca9450cd0d17bc7154a4e514e98eb65": {
+    "address": "0x305465442ca9450cd0d17bc7154a4e514e98eb65",
+    "chain": "bsc",
+    "contract_name": "BcoinToken",
+    "added_at": "2026-07-02T14:34:50.448534",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:4, low:15, medium:63"
+  },
+  "bsc:0xeeca71a751ab52f25a371065d168e0fcc3c8b00d": {
+    "address": "0xeeca71a751ab52f25a371065d168e0fcc3c8b00d",
+    "chain": "bsc",
+    "contract_name": "TokenFactory",
+    "added_at": "2026-07-02T14:34:50.452338",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:1, medium:6"
+  },
+  "bsc:0x2dabcbd7328dd166310c0f6c134ed3dc4a81ede3": {
+    "address": "0x2dabcbd7328dd166310c0f6c134ed3dc4a81ede3",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.471242",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x56f516961fd1ee2a166c9f4755743322a3cce6bd": {
+    "address": "0x56f516961fd1ee2a166c9f4755743322a3cce6bd",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.476476",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "bsc:0xd84cf9fc929f7ca657d9762b5157515ff19c157e": {
+    "address": "0xd84cf9fc929f7ca657d9762b5157515ff19c157e",
+    "chain": "bsc",
+    "contract_name": "Fortune2Predict",
+    "added_at": "2026-07-02T14:34:50.485916",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:5, medium:15"
+  },
+  "bsc:0x001208f7f53f78db2b32e1c68198d3e8f320aa23": {
+    "address": "0x001208f7f53f78db2b32e1c68198d3e8f320aa23",
+    "chain": "bsc",
+    "contract_name": "APWithPremium",
+    "added_at": "2026-07-02T14:34:50.493385",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:9, medium:21"
+  },
+  "bsc:0x99660ae08bce6f8ff8599bd806a9f7362f636589": {
+    "address": "0x99660ae08bce6f8ff8599bd806a9f7362f636589",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.499897",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:18"
+  },
+  "bsc:0xa73175e92a68cd3f73d96f36af3648883c8abed9": {
+    "address": "0xa73175e92a68cd3f73d96f36af3648883c8abed9",
+    "chain": "bsc",
+    "contract_name": "MJToken",
+    "added_at": "2026-07-02T14:34:50.506518",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:5, medium:28"
+  },
+  "bsc:0xf1c599e9a5fbdea408a7409c0176a2fe42c64444": {
+    "address": "0xf1c599e9a5fbdea408a7409c0176a2fe42c64444",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.518710",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c": {
+    "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+    "chain": "bsc",
+    "contract_name": "BEP20Token",
+    "added_at": "2026-07-02T14:34:50.525268",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:1, medium:26"
+  },
+  "bsc:0xcf2bd7e13d12eaba6c938e6764352ef5d0834444": {
+    "address": "0xcf2bd7e13d12eaba6c938e6764352ef5d0834444",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.529521",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0xdcffeb0c30263888a48485a664ec9563a54891a1": {
+    "address": "0xdcffeb0c30263888a48485a664ec9563a54891a1",
+    "chain": "bsc",
+    "contract_name": "FeeModuleV3",
+    "added_at": "2026-07-02T14:34:50.537545",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:12, medium:23"
+  },
+  "bsc:0x90bb5bdc6acd166237640c8707a694f1fc3aab84": {
+    "address": "0x90bb5bdc6acd166237640c8707a694f1fc3aab84",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.541371",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:1, medium:5"
+  },
+  "bsc:0xea953ea6634d55dac6697c436b1e81a679db5882": {
+    "address": "0xea953ea6634d55dac6697c436b1e81a679db5882",
+    "chain": "bsc",
+    "contract_name": "USDu",
+    "added_at": "2026-07-02T14:34:50.553671",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:20, medium:38"
+  },
+  "bsc:0x007200c66bd2a5bd7c744b90df8ecbeb34fd26d4": {
+    "address": "0x007200c66bd2a5bd7c744b90df8ecbeb34fd26d4",
+    "chain": "bsc",
+    "contract_name": "TermMaxCheckIn",
+    "added_at": "2026-07-02T14:34:50.562782",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:1, medium:7"
+  },
+  "bsc:0x6131b5fae19ea4f9d964eac0408e4408b66337b5": {
+    "address": "0x6131b5fae19ea4f9d964eac0408e4408b66337b5",
+    "chain": "bsc",
+    "contract_name": "MetaAggregationRouterV2",
+    "added_at": "2026-07-02T14:34:50.573086",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:5, medium:26"
+  },
+  "bsc:0x30ea3d7a3b1cbc54b3e4ef028a751de6b7a5ed80": {
+    "address": "0x30ea3d7a3b1cbc54b3e4ef028a751de6b7a5ed80",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.579733",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x63c19961d5f76b18848389c4d34a724ff3f45c8c": {
+    "address": "0x63c19961d5f76b18848389c4d34a724ff3f45c8c",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.587292",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:3"
+  },
+  "bsc:0x18ea4df6a9cde2472f2321a4ec77da106498a66e": {
+    "address": "0x18ea4df6a9cde2472f2321a4ec77da106498a66e",
+    "chain": "bsc",
+    "contract_name": "Singularry",
+    "added_at": "2026-07-02T14:34:50.604846",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:2, medium:95"
+  },
+  "bsc:0xb4a18c0d1306297f7fd4403884ab0ded263fcf0e": {
+    "address": "0xb4a18c0d1306297f7fd4403884ab0ded263fcf0e",
+    "chain": "bsc",
+    "contract_name": "HalfMoonExecutor",
+    "added_at": "2026-07-02T14:34:50.615143",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:18, medium:19"
+  },
+  "bsc:0x91f8aff3738825e8eb16fc6f6b1a7a4647bdb299": {
+    "address": "0x91f8aff3738825e8eb16fc6f6b1a7a4647bdb299",
+    "chain": "bsc",
+    "contract_name": "GMTokenManager",
+    "added_at": "2026-07-02T14:34:50.623311",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:6, medium:18"
+  },
+  "bsc:0xb971ef87ede563556b2ed4b1c0b0019111dd85d2": {
+    "address": "0xb971ef87ede563556b2ed4b1c0b0019111dd85d2",
+    "chain": "bsc",
+    "contract_name": "SwapRouter02",
+    "added_at": "2026-07-02T14:34:50.652873",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:46, medium:128"
+  },
+  "bsc:0xc73241a545ec9461e084606d81719fb0dc490267": {
+    "address": "0xc73241a545ec9461e084606d81719fb0dc490267",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.661629",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:1, medium:36"
+  },
+  "bsc:0x0000000071727de22e5e9d8baf0edac6f37da032": {
+    "address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+    "chain": "bsc",
+    "contract_name": "EntryPoint",
+    "added_at": "2026-07-02T14:34:50.672652",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:6, medium:25"
+  },
+  "bsc:0x1906c1d672b88cd1b9ac7593301ca990f94eae07": {
+    "address": "0x1906c1d672b88cd1b9ac7593301ca990f94eae07",
+    "chain": "bsc",
+    "contract_name": "UniversalRouter",
+    "added_at": "2026-07-02T14:34:50.717298",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:62, medium:150"
+  },
+  "bsc:0x19ed254efa5e061d28d84650891a3db2a9940c16": {
+    "address": "0x19ed254efa5e061d28d84650891a3db2a9940c16",
+    "chain": "bsc",
+    "contract_name": "SupMain",
+    "added_at": "2026-07-02T14:34:50.733630",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:2, medium:96"
+  },
+  "bsc:0x7dcf424375c85ccef80e14430a5df3fe23594444": {
+    "address": "0x7dcf424375c85ccef80e14430a5df3fe23594444",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T14:34:50.743356",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0x43be8192363899b853a98661e2ea6451940e27e3": {
+    "address": "0x43be8192363899b853a98661e2ea6451940e27e3",
+    "chain": "bsc",
+    "contract_name": "AlloXCheck",
+    "added_at": "2026-07-02T14:34:50.749658",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:5, medium:7"
+  },
+  "bsc:0x6eb6dd5d939f701906587287f24610e35913458f": {
+    "address": "0x6eb6dd5d939f701906587287f24610e35913458f",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.756916",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:3"
+  },
+  "bsc:0x5faf1dfc1e933daaa92cfbd165cbf6acf2d42c3b": {
+    "address": "0x5faf1dfc1e933daaa92cfbd165cbf6acf2d42c3b",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.763308",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "bsc:0x634813dd921ed175ddaa93fca1f3aa4e3f0f1bd7": {
+    "address": "0x634813dd921ed175ddaa93fca1f3aa4e3f0f1bd7",
+    "chain": "bsc",
+    "contract_name": "FortuneSign",
+    "added_at": "2026-07-02T14:34:50.774224",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:5, medium:14"
+  },
+  "bsc:0xb94a905e759b430707635a560b86fa425494d8b1": {
+    "address": "0xb94a905e759b430707635a560b86fa425494d8b1",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.781213",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x3d90f66b534dd8482b181e24655a9e8265316be9": {
+    "address": "0x3d90f66b534dd8482b181e24655a9e8265316be9",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.791448",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:15, medium:11"
+  },
+  "bsc:0xbe9d156892e55e7154bcd3cb0fea677f9d3103e1": {
+    "address": "0xbe9d156892e55e7154bcd3cb0fea677f9d3103e1",
+    "chain": "bsc",
+    "contract_name": "BeaconProxy",
+    "added_at": "2026-07-02T14:34:50.798082",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:5"
+  },
+  "bsc:0x73eec8dc8bbeb75033e04f67b186b1589082e0d0": {
+    "address": "0x73eec8dc8bbeb75033e04f67b186b1589082e0d0",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.801629",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:11"
+  },
+  "bsc:0xfc0c4222b3a0c9b060c0b959dec62442036b9035": {
+    "address": "0xfc0c4222b3a0c9b060c0b959dec62442036b9035",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.814603",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:11"
+  },
+  "bsc:0x53841c73217735f37bc1775538b03b23fefd8346": {
+    "address": "0x53841c73217735f37bc1775538b03b23fefd8346",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.821601",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:15, medium:11"
+  },
+  "bsc:0x3348a84ba66cd5f9b36c2c3fd7ad1c31dd583333": {
+    "address": "0x3348a84ba66cd5f9b36c2c3fd7ad1c31dd583333",
+    "chain": "bsc",
+    "contract_name": "ZeroVirusT",
+    "added_at": "2026-07-02T14:34:50.836152",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:7, medium:34"
+  },
+  "bsc:0x88d7e9b65dc24cf54f5edef929225fc3e1580c25": {
+    "address": "0x88d7e9b65dc24cf54f5edef929225fc3e1580c25",
+    "chain": "bsc",
+    "contract_name": "JumpToken",
+    "added_at": "2026-07-02T14:34:50.842291",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:3, medium:26"
+  },
+  "bsc:0x888888886619275d33c00d3bc62df94d700dcd42": {
+    "address": "0x888888886619275d33c00d3bc62df94d700dcd42",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.853091",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "bsc:0xf756c6e7d137a68d6d649254f7d4da74fd487777": {
+    "address": "0xf756c6e7d137a68d6d649254f7d4da74fd487777",
+    "chain": "bsc",
+    "contract_name": "FlapTaxTokenV3",
+    "added_at": "2026-07-02T14:34:50.872046",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:17, medium:108"
+  },
+  "bsc:0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe": {
+    "address": "0x407993575c91ce7643a4d4ccacc9a98c36ee1bbe",
+    "chain": "bsc",
+    "contract_name": "PinkLock02",
+    "added_at": "2026-07-02T14:34:50.888506",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:22, medium:44"
+  },
+  "bsc:0x337685fdab40d39bd02028545a4ffa7d287cc3e2": {
+    "address": "0x337685fdab40d39bd02028545a4ffa7d287cc3e2",
+    "chain": "bsc",
+    "contract_name": "MayanForwarder2",
+    "added_at": "2026-07-02T14:34:50.896872",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:16, medium:26"
+  },
+  "bsc:0x5b936e295def7ba5e85dabc701a14b774bd7544b": {
+    "address": "0x5b936e295def7ba5e85dabc701a14b774bd7544b",
+    "chain": "bsc",
+    "contract_name": "OSCore",
+    "added_at": "2026-07-02T14:34:50.910222",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:4"
+  },
+  "bsc:0x862b8280bb53fdad231760b6ddc75ed6bf3b0351": {
+    "address": "0x862b8280bb53fdad231760b6ddc75ed6bf3b0351",
+    "chain": "bsc",
+    "contract_name": "Mystery",
+    "added_at": "2026-07-02T14:34:50.924159",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:13, medium:38"
+  },
+  "bsc:0x87e7f605c593d275f14acf2a414b185585315685": {
+    "address": "0x87e7f605c593d275f14acf2a414b185585315685",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.937870",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x2a8929e2be8b21c4637345003a528166520b02a6": {
+    "address": "0x2a8929e2be8b21c4637345003a528166520b02a6",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.943069",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x0fb0de3ec0be2f6efb336d452b470a27b7c4a4d9": {
+    "address": "0x0fb0de3ec0be2f6efb336d452b470a27b7c4a4d9",
+    "chain": "bsc",
+    "contract_name": "Staking",
+    "added_at": "2026-07-02T14:34:50.949379",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:24, medium:35"
+  },
+  "bsc:0x21be535bd3c5e71c65b4feb866169942c8e37777": {
+    "address": "0x21be535bd3c5e71c65b4feb866169942c8e37777",
+    "chain": "bsc",
+    "contract_name": "FlapTaxTokenV3",
+    "added_at": "2026-07-02T14:34:50.964637",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:17, medium:108"
+  },
+  "bsc:0x09027daa5ce64598e933fdb8b4a160036b410048": {
+    "address": "0x09027daa5ce64598e933fdb8b4a160036b410048",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T14:34:50.971381",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:3, low:4, medium:3"
+  },
+  "bsc:0x8366a748e02f730911cb5ab4fd049d2e1e0414b7": {
+    "address": "0x8366a748e02f730911cb5ab4fd049d2e1e0414b7",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T14:34:50.975631",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0x080f02795ba9003404aceaf102f14443647dbe08": {
+    "address": "0x080f02795ba9003404aceaf102f14443647dbe08",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T14:34:50.981672",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0xa13814fe399ea85e0541b4fdd2b38efa149c8ee5": {
+    "address": "0xa13814fe399ea85e0541b4fdd2b38efa149c8ee5",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T14:34:50.987669",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0x62ccef0b4545166f721caa9fee13c1d3767e27dc": {
+    "address": "0x62ccef0b4545166f721caa9fee13c1d3767e27dc",
+    "chain": "bsc",
+    "contract_name": "DexRouter",
+    "added_at": "2026-07-02T14:34:51.009391",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "high:6, low:153, medium:59"
+  },
+  "bsc:0xf64b0b318aaf83bd9071110af24d24445719a07f": {
+    "address": "0xf64b0b318aaf83bd9071110af24d24445719a07f",
+    "chain": "bsc",
+    "contract_name": "ConditionalTokens",
+    "added_at": "2026-07-02T14:34:51.020376",
+    "reason": "Scanned - no exploitable vulnerabilities found",
+    "scan_summary": "low:22, medium:33"
+  },
+  "bsc:0x4dae2f939acf50408e13d58534ff8c2776d45265": {
+    "address": "0x4dae2f939acf50408e13d58534ff8c2776d45265",
+    "chain": "bsc",
+    "contract_name": "UniversalRouter",
+    "added_at": "2026-07-02T15:37:19.056125",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:40, medium:97"
+  },
+  "bsc:0x329922c818cff15d02c39ad05c1e58c793bd4444": {
+    "address": "0x329922c818cff15d02c39ad05c1e58c793bd4444",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T15:37:19.056154",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0x92aa03137385f18539301349dcfc9ebc923ffb10": {
+    "address": "0x92aa03137385f18539301349dcfc9ebc923ffb10",
+    "chain": "bsc",
+    "contract_name": "SKYAIToken",
+    "added_at": "2026-07-02T15:37:19.056164",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0xc47ce083f18776e711c4365bc4daa283229cb6ca": {
+    "address": "0xc47ce083f18776e711c4365bc4daa283229cb6ca",
+    "chain": "bsc",
+    "contract_name": "DWDinosaurRWA",
+    "added_at": "2026-07-02T15:37:19.056174",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:4, medium:35"
+  },
+  "bsc:0xda4038fe31e7bbcbdd56987acc69be0a8e8f0f8f": {
+    "address": "0xda4038fe31e7bbcbdd56987acc69be0a8e8f0f8f",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056185",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xe0f8243a20a4ccf22f6678a24cbdadb06424b9b7": {
+    "address": "0xe0f8243a20a4ccf22f6678a24cbdadb06424b9b7",
+    "chain": "bsc",
+    "contract_name": "BscUsdtProductionArbitrageEngine",
+    "added_at": "2026-07-02T15:37:19.056197",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:13, medium:28"
+  },
+  "bsc:0xeb91d9ed63a060077d51678248ae11dc784ab735": {
+    "address": "0xeb91d9ed63a060077d51678248ae11dc784ab735",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056205",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:15, medium:11"
+  },
+  "bsc:0xbb4ead3db45fa9b7ef2c8b487b34fece6b6c6c97": {
+    "address": "0xbb4ead3db45fa9b7ef2c8b487b34fece6b6c6c97",
+    "chain": "bsc",
+    "contract_name": "OROSystemMainnet",
+    "added_at": "2026-07-02T15:37:19.056212",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:16, medium:22"
+  },
+  "bsc:0xf9a2e332b1ecd3d6ab51618432d68c8d5995c992": {
+    "address": "0xf9a2e332b1ecd3d6ab51618432d68c8d5995c992",
+    "chain": "bsc",
+    "contract_name": "BurnableTeamToken",
+    "added_at": "2026-07-02T15:37:19.056219",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:26"
+  },
+  "bsc:0xb685760ebd368a891f27ae547391f4e2a289895b": {
+    "address": "0xb685760ebd368a891f27ae547391f4e2a289895b",
+    "chain": "bsc",
+    "contract_name": "Bridgers",
+    "added_at": "2026-07-02T15:37:19.056227",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:13"
+  },
+  "bsc:0xd36b6d646ac6e23672e9eedec558164c7f2d6deb": {
+    "address": "0xd36b6d646ac6e23672e9eedec558164c7f2d6deb",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056234",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0xc9fe92ccdd1eba028c4b35e876c7216adadfc2af": {
+    "address": "0xc9fe92ccdd1eba028c4b35e876c7216adadfc2af",
+    "chain": "bsc",
+    "contract_name": "AIB",
+    "added_at": "2026-07-02T15:37:19.056242",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:3, medium:25"
+  },
+  "bsc:0xe6cae4094352a670c3eb0fcbda17c898b71c7f2a": {
+    "address": "0xe6cae4094352a670c3eb0fcbda17c898b71c7f2a",
+    "chain": "bsc",
+    "contract_name": "FivePillarsToken",
+    "added_at": "2026-07-02T15:37:19.056250",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:28"
+  },
+  "bsc:0x385c279445581a186a4182a5503094ebb652ec71": {
+    "address": "0x385c279445581a186a4182a5503094ebb652ec71",
+    "chain": "bsc",
+    "contract_name": "StakedUSDuV2",
+    "added_at": "2026-07-02T15:37:19.056258",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:27, medium:94"
+  },
+  "bsc:0x1b81d678ffb9c0263b24a97847620c99d213eb14": {
+    "address": "0x1b81d678ffb9c0263b24a97847620c99d213eb14",
+    "chain": "bsc",
+    "contract_name": "SwapRouter",
+    "added_at": "2026-07-02T15:37:19.056265",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:30, medium:50"
+  },
+  "bsc:0x0bfd0d8116b3a9081094f60d7131653785f03ac6": {
+    "address": "0x0bfd0d8116b3a9081094f60d7131653785f03ac6",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056274",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x7a4a5c919ae2541aed11041a1aeee68f1287f95b": {
+    "address": "0x7a4a5c919ae2541aed11041a1aeee68f1287f95b",
+    "chain": "bsc",
+    "contract_name": "PositionManager",
+    "added_at": "2026-07-02T15:37:19.056285",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:40, medium:94"
+  },
+  "bsc:0x6b37677ceb05ca05f29433cbc2f3359080fe3c7b": {
+    "address": "0x6b37677ceb05ca05f29433cbc2f3359080fe3c7b",
+    "chain": "bsc",
+    "contract_name": "GnosisSafeProxy",
+    "added_at": "2026-07-02T15:37:19.056296",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:3, medium:3"
+  },
+  "bsc:0x7a50b180265eb5347ce7b92224f0b0cd6ce0493b": {
+    "address": "0x7a50b180265eb5347ce7b92224f0b0cd6ce0493b",
+    "chain": "bsc",
+    "contract_name": "OptimizedTransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056304",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:12"
+  },
+  "bsc:0xfca64d34859b120c36426d41f941e708ea47cbec": {
+    "address": "0xfca64d34859b120c36426d41f941e708ea47cbec",
+    "chain": "bsc",
+    "contract_name": "CTFAutoRedemptionHelper",
+    "added_at": "2026-07-02T15:37:19.056313",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:2, medium:51"
+  },
+  "bsc:0x69460570c93f9de5e2edbc3052bf10125f0ca22d": {
+    "address": "0x69460570c93f9de5e2edbc3052bf10125f0ca22d",
+    "chain": "bsc",
+    "contract_name": "RangoDiamond",
+    "added_at": "2026-07-02T15:37:19.056321",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:1"
+  },
+  "bsc:0x777281a1134a4693cb64b67a699e7a51ec3479b5": {
+    "address": "0x777281a1134a4693cb64b67a699e7a51ec3479b5",
+    "chain": "bsc",
+    "contract_name": "FlowXProtocol",
+    "added_at": "2026-07-02T15:37:19.056328",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:27, medium:29"
+  },
+  "bsc:0x0973cda9697c877de1b9beda63d6f27d29922b80": {
+    "address": "0x0973cda9697c877de1b9beda63d6f27d29922b80",
+    "chain": "bsc",
+    "contract_name": "TheFortuneProtocolG",
+    "added_at": "2026-07-02T15:37:19.056335",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:40, medium:26"
+  },
+  "bsc:0xf8500d88be054e5b67b69f107ce8d74a7a020cc9": {
+    "address": "0xf8500d88be054e5b67b69f107ce8d74a7a020cc9",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056346",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0x99991c6aabba5a096f24f250b73580f5179b9999": {
+    "address": "0x99991c6aabba5a096f24f250b73580f5179b9999",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056354",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:5"
+  },
+  "bsc:0x992879cd8ce0c312d98648875b5a8d6d042cbf34": {
+    "address": "0x992879cd8ce0c312d98648875b5a8d6d042cbf34",
+    "chain": "bsc",
+    "contract_name": "BeaconProxy",
+    "added_at": "2026-07-02T15:37:19.056361",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:10, medium:7"
+  },
+  "bsc:0x233c5370ccfb3cd7409d9a3fb98ab94de94cb4cd": {
+    "address": "0x233c5370ccfb3cd7409d9a3fb98ab94de94cb4cd",
+    "chain": "bsc",
+    "contract_name": "MetaWallet",
+    "added_at": "2026-07-02T15:37:19.056370",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:7, medium:18"
+  },
+  "bsc:0x2859e4544c4bb03966803b044a93563bd2d0dd4d": {
+    "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+    "chain": "bsc",
+    "contract_name": "BEP20UpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056378",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:14, medium:7"
+  },
+  "bsc:0x04eb096ad2ae6132fa55c3f4a2d349cc9d8e1313": {
+    "address": "0x04eb096ad2ae6132fa55c3f4a2d349cc9d8e1313",
+    "chain": "bsc",
+    "contract_name": "HAPPYToken",
+    "added_at": "2026-07-02T15:37:19.056386",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:21, medium:50"
+  },
+  "bsc:0x570a5d26f7765ecb712c0924e4de545b89fd43df": {
+    "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df",
+    "chain": "bsc",
+    "contract_name": "BEP20UpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056394",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:14, medium:7"
+  },
+  "bsc:0xbd937d8aed1bc812d4234e0dba6331675b343621": {
+    "address": "0xbd937d8aed1bc812d4234e0dba6331675b343621",
+    "chain": "bsc",
+    "contract_name": "PancakePair",
+    "added_at": "2026-07-02T15:37:19.056402",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:4, medium:71"
+  },
+  "bsc:0x145cd0d5c3dd0ef1405dcf1b4d2bce7c611625db": {
+    "address": "0x145cd0d5c3dd0ef1405dcf1b4d2bce7c611625db",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056411",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0xa07c5b74c9b40447a954e1466938b865b6bbea36": {
+    "address": "0xa07c5b74c9b40447a954e1466938b865b6bbea36",
+    "chain": "bsc",
+    "contract_name": "VBNB",
+    "added_at": "2026-07-02T15:37:19.056419",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:4, medium:2"
+  },
+  "bsc:0x004202d0b1759bcdbd939bc5a2bfbceed9dd34b1": {
+    "address": "0x004202d0b1759bcdbd939bc5a2bfbceed9dd34b1",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056427",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:4, medium:8"
+  },
+  "bsc:0x7511839dffaf432a5dba567bc1aa77115efef882": {
+    "address": "0x7511839dffaf432a5dba567bc1aa77115efef882",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T15:37:19.056437",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0xa7f61df60260c092d6303619b7004ebebf9871ea": {
+    "address": "0xa7f61df60260c092d6303619b7004ebebf9871ea",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056446",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:15, medium:18"
+  },
+  "bsc:0xca5416364720c7324a547d39b1db496a2dcd4f0d": {
+    "address": "0xca5416364720c7324a547d39b1db496a2dcd4f0d",
+    "chain": "bsc",
+    "contract_name": "CcExchangeRouterProxy",
+    "added_at": "2026-07-02T15:37:19.056454",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:11"
+  },
+  "bsc:0x4337084d9e255ff0702461cf8895ce9e3b5ff108": {
+    "address": "0x4337084d9e255ff0702461cf8895ce9e3b5ff108",
+    "chain": "bsc",
+    "contract_name": "EntryPoint",
+    "added_at": "2026-07-02T15:37:19.056463",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:7, medium:36"
+  },
+  "bsc:0x5001fa16f04acdd246d41784e71370db07262981": {
+    "address": "0x5001fa16f04acdd246d41784e71370db07262981",
+    "chain": "bsc",
+    "contract_name": "LPTokenPool",
+    "added_at": "2026-07-02T15:37:19.056471",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:13, medium:34"
+  },
+  "bsc:0xd6759d47fccdef7b8e318479cec4d128366f2a44": {
+    "address": "0xd6759d47fccdef7b8e318479cec4d128366f2a44",
+    "chain": "bsc",
+    "contract_name": "BTitanXMatrix",
+    "added_at": "2026-07-02T15:37:19.056479",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:12, medium:22"
+  },
+  "bsc:0x6e3d884c96d640526f273c61dfcf08915ebd7e2b": {
+    "address": "0x6e3d884c96d640526f273c61dfcf08915ebd7e2b",
+    "chain": "bsc",
+    "contract_name": "TokenMessaging",
+    "added_at": "2026-07-02T15:37:19.056486",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:4, medium:82"
+  },
+  "bsc:0x9400f8ad57e9e0f352345935d6d3175975eb1d9f": {
+    "address": "0x9400f8ad57e9e0f352345935d6d3175975eb1d9f",
+    "chain": "bsc",
+    "contract_name": "YieldBearingConditionalTokens",
+    "added_at": "2026-07-02T15:37:19.056494",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:25, medium:51"
+  },
+  "bsc:0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d": {
+    "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "chain": "bsc",
+    "contract_name": "BEP20UpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056503",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:14, medium:7"
+  },
+  "bsc:0x2b280b233b681f54c04e91341b6b601a1ef1ff77": {
+    "address": "0x2b280b233b681f54c04e91341b6b601a1ef1ff77",
+    "chain": "bsc",
+    "contract_name": "MainToken",
+    "added_at": "2026-07-02T15:37:19.056511",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:8, medium:76"
+  },
+  "bsc:0x296b00198dc7ec3410e12da814d9267bb8df506a": {
+    "address": "0x296b00198dc7ec3410e12da814d9267bb8df506a",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056530",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x8393f7105b4ef216d2adc9fd50a25f19a9e582dd": {
+    "address": "0x8393f7105b4ef216d2adc9fd50a25f19a9e582dd",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056538",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x66f7690895cdac91351a5e681148813931ed4444": {
+    "address": "0x66f7690895cdac91351a5e681148813931ed4444",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T15:37:19.056546",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:1"
+  },
+  "bsc:0x37ad5104056f6c158d305c50577aca5515ca20ae": {
+    "address": "0x37ad5104056f6c158d305c50577aca5515ca20ae",
+    "chain": "bsc",
+    "contract_name": "Kernel",
+    "added_at": "2026-07-02T15:37:19.056553",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:79, medium:48"
+  },
+  "bsc:0x61d19d71f8c6ab88902c9bbf3f712a03c5b20529": {
+    "address": "0x61d19d71f8c6ab88902c9bbf3f712a03c5b20529",
+    "chain": "bsc",
+    "contract_name": "FRXGToken",
+    "added_at": "2026-07-02T15:37:19.056561",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:17, medium:47"
+  },
+  "bsc:0x56c892d6183d5b6bf2841d030147414ff1621b8b": {
+    "address": "0x56c892d6183d5b6bf2841d030147414ff1621b8b",
+    "chain": "bsc",
+    "contract_name": "BuyBurn",
+    "added_at": "2026-07-02T15:37:19.056571",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:37, medium:47"
+  },
+  "bsc:0x9b61853a4094ffee4506224242e06eaf74bdd5c8": {
+    "address": "0x9b61853a4094ffee4506224242e06eaf74bdd5c8",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056581",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:13, medium:6"
+  },
+  "bsc:0xf72bb66e324b5188c6178c6401ee982fa30be096": {
+    "address": "0xf72bb66e324b5188c6178c6401ee982fa30be096",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T15:37:19.056592",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0x9993799f771f02de08db70197972e84831fec586": {
+    "address": "0x9993799f771f02de08db70197972e84831fec586",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T15:37:19.056600",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "medium:23"
+  },
+  "bsc:0x40a1fe393a7f566f27df6ace18e6773be844dafc": {
+    "address": "0x40a1fe393a7f566f27df6ace18e6773be844dafc",
+    "chain": "bsc",
+    "contract_name": "Aggregator",
+    "added_at": "2026-07-02T15:37:19.056608",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:97, medium:126"
+  },
+  "bsc:0x45d35c071d4974b2e289b3f3b7570491f2c4d95d": {
+    "address": "0x45d35c071d4974b2e289b3f3b7570491f2c4d95d",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056617",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xd5f6ef5deabe61e6d5cdb49bfb6f156f2c1ca715": {
+    "address": "0xd5f6ef5deabe61e6d5cdb49bfb6f156f2c1ca715",
+    "chain": "bsc",
+    "contract_name": "PeerToken",
+    "added_at": "2026-07-02T15:37:19.056627",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:26, medium:55"
+  },
+  "bsc:0x0327804bfc09a1f8833bcff42c9d44fc8f6da669": {
+    "address": "0x0327804bfc09a1f8833bcff42c9d44fc8f6da669",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056636",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xb9a38651c80feb365217cb5aaa73f8162b86b9bd": {
+    "address": "0xb9a38651c80feb365217cb5aaa73f8162b86b9bd",
+    "chain": "bsc",
+    "contract_name": "SimpleProxy11",
+    "added_at": "2026-07-02T15:37:19.056645",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:5, medium:4"
+  },
+  "bsc:0xaa16b7ab0ded19ba1f174e5fc239f13b5595874a": {
+    "address": "0xaa16b7ab0ded19ba1f174e5fc239f13b5595874a",
+    "chain": "bsc",
+    "contract_name": "ERC1967Proxy",
+    "added_at": "2026-07-02T15:37:19.056653",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:13, medium:6"
+  },
+  "bsc:0x35d93690eaab5d586059d19c5047f790d90d6ec7": {
+    "address": "0x35d93690eaab5d586059d19c5047f790d90d6ec7",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056699",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:4, medium:14"
+  },
+  "bsc:0xf15c7f1f86398520b70505e9cc285a8b18d9a21f": {
+    "address": "0xf15c7f1f86398520b70505e9cc285a8b18d9a21f",
+    "chain": "bsc",
+    "contract_name": "USDTz",
+    "added_at": "2026-07-02T15:37:19.056707",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:4, medium:29"
+  },
+  "bsc:0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d": {
+    "address": "0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d",
+    "chain": "bsc",
+    "contract_name": "ARK",
+    "added_at": "2026-07-02T15:37:19.056720",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:8, medium:31"
+  },
+  "bsc:0xdb953299588b7a7c38044bcd004b4b1892026333": {
+    "address": "0xdb953299588b7a7c38044bcd004b4b1892026333",
+    "chain": "bsc",
+    "contract_name": "AiFiToken",
+    "added_at": "2026-07-02T15:37:19.056729",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:22, medium:66"
+  },
+  "bsc:0xc42b129b08951531a304b94c9eda0d3c10aa6c24": {
+    "address": "0xc42b129b08951531a304b94c9eda0d3c10aa6c24",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056738",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:2, low:11, medium:20"
+  },
+  "bsc:0x150fe2f051ef40124388b4d798b1887882d103da": {
+    "address": "0x150fe2f051ef40124388b4d798b1887882d103da",
+    "chain": "bsc",
+    "contract_name": "ClaimVault",
+    "added_at": "2026-07-02T15:37:19.056746",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:6, medium:14"
+  },
+  "bsc:0xb0ad9c2313b9719ea0ccd43d7e7e1fd07e7cbd90": {
+    "address": "0xb0ad9c2313b9719ea0ccd43d7e7e1fd07e7cbd90",
+    "chain": "bsc",
+    "contract_name": "DBToken",
+    "added_at": "2026-07-02T15:37:19.056755",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:1, medium:5"
+  },
+  "bsc:0xbcd841ee7b34d92c82d4346c05bf23120d3d4930": {
+    "address": "0xbcd841ee7b34d92c82d4346c05bf23120d3d4930",
+    "chain": "bsc",
+    "contract_name": "AirDrop",
+    "added_at": "2026-07-02T15:37:19.056769",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:7, medium:25"
+  },
+  "bsc:0xc7f79ea9c7ff17968eec60b4cc9880905cfdb2f4": {
+    "address": "0xc7f79ea9c7ff17968eec60b4cc9880905cfdb2f4",
+    "chain": "bsc",
+    "contract_name": "AuthorizedForwarder",
+    "added_at": "2026-07-02T15:37:19.056778",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:2, medium:17"
+  },
+  "bsc:0x55f61dd910cc9adc3eac0ee212f3691ae21535cb": {
+    "address": "0x55f61dd910cc9adc3eac0ee212f3691ae21535cb",
+    "chain": "bsc",
+    "contract_name": "Kernel",
+    "added_at": "2026-07-02T15:37:19.056786",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:1, low:79, medium:48"
+  },
+  "bsc:0x9b68c219dbcc09eba7ca470eabb28a38daecbccc": {
+    "address": "0x9b68c219dbcc09eba7ca470eabb28a38daecbccc",
+    "chain": "bsc",
+    "contract_name": "TransparentUpgradeableProxy",
+    "added_at": "2026-07-02T15:37:19.056796",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "high:3, low:4, medium:9"
+  },
+  "bsc:0xfb5b838b6cfeedc2873ab27866079ac55363d37e": {
+    "address": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+    "chain": "bsc",
+    "contract_name": "FLOKI",
+    "added_at": "2026-07-02T15:37:19.056804",
+    "reason": "Auto-whitelist: no Slither-confirmed critical vulns (txscan)",
+    "scan_summary": "low:3, medium:22"
+  },
+  "bsc:0x79a11e727d00ef6333845b660c94c3e1478e6a41": {
+    "address": "0x79a11e727D00ef6333845B660c94c3e1478E6A41",
+    "chain": "bsc",
+    "contract_name": "BananaToken",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: reentrancy in _transfer but .transfer() 2300 gas blocks callback on-chain",
+    "verification": "HARD_TO_EXPLOIT",
+    "slither_findings": "reentrancy, arbitrary-send-erc20",
+    "scan_summary": "high:3, low:8, medium:22"
+  },
+  "bsc:0x5b2fecdbdd9ddaebb894f0b3988210bdbc6bf315": {
+    "address": "0x5b2fEcDBDd9DDaebB894f0b3988210bDBc6BF315",
+    "chain": "bsc",
+    "contract_name": "OK",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: 60s cooldown + same-block direction limit + inSwap lock + daily limit",
+    "verification": "HARD_TO_EXPLOIT",
+    "slither_findings": "reentrancy, arbitrary-send",
+    "scan_summary": "high:2, low:15, medium:30"
+  },
+  "bsc:0xf46099b9a14a9767e398cd19fa996c23b2e9cb9d": {
+    "address": "0xF46099b9a14a9767e398CD19FA996c23B2E9cB9d",
+    "chain": "bsc",
+    "contract_name": "FatTokenV5",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: lockTheSwap + .transfer() 2300 gas + fixed address calls + TokenDistributor false positive",
+    "verification": "NOT_EXPLOITABLE",
+    "slither_findings": "reentrancy, arbitrary-send-erc20",
+    "scan_summary": "high:4, low:12, medium:42"
+  },
+  "bsc:0x6a01fa3917ca54cf1702c44e9e95066c031aa151": {
+    "address": "0x6a01fA3917CA54cF1702C44E9E95066C031AA151",
+    "chain": "bsc",
+    "contract_name": "WorldCup",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: onlyStakeBot access control + funds to owner-controlled callBackAddress",
+    "verification": "NOT_EXPLOITABLE",
+    "slither_findings": "arbitrary-send-eth",
+    "scan_summary": "high:1, low:6, medium:15"
+  },
+  "bsc:0xd25bd6f78e4043ff166468e16bdd4b3aa31e022d": {
+    "address": "0xD25bD6F78e4043Ff166468E16bDD4B3aA31E022D",
+    "chain": "bsc",
+    "contract_name": "Token",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: same pattern as FatTokenV5 - lockTheSwap + fixed address calls",
+    "verification": "HARD_TO_EXPLOIT",
+    "slither_findings": "reentrancy, arbitrary-send",
+    "scan_summary": "high:3, low:10, medium:28"
+  },
+  "bsc:0x17907521ac2e8637614cefb5f568a214e10e001a": {
+    "address": "0x17907521Ac2E8637614CefB5f568A214e10e001A",
+    "chain": "bsc",
+    "contract_name": "TOPSToken",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: no profit path + fixed address calls + onlyOwner protection",
+    "verification": "HARD_TO_EXPLOIT",
+    "slither_findings": "arbitrary-send-erc20",
+    "scan_summary": "high:2, low:18, medium:101"
+  },
+  "bsc:0xbf92bc3c54df6c159db95fab69873b4bd35effbb": {
+    "address": "0xBf92Bc3c54Df6C159Db95FAb69873B4Bd35EfFBb",
+    "chain": "bsc",
+    "contract_name": "UniswapV3RouterSimplified",
+    "added_at": "2026-07-02T16:05:16.878130",
+    "reason": "Verified: standard Uniswap V3 Router _pay() pattern, Slither false positive",
+    "verification": "FALSE_POSITIVE",
+    "slither_findings": "arbitrary-send",
+    "scan_summary": "high:1, low:5, medium:12"
+  },
+  "bsc:0x0000000000000000000000000000000000001000": {
+    "address": "0x0000000000000000000000000000000000001000",
+    "chain": "bsc",
+    "contract_name": "BSCValidatorSet",
+    "added_at": "2026-07-02T16:05:35.105362",
+    "reason": "BSC system precompile contract - not user-deployed, not exploitable",
+    "verification": "NOT_EXPLOITABLE",
+    "slither_findings": "high:2, medium:43 (system contract false positives)",
+    "scan_summary": "high:2, medium:43, low:135"
+  }
+}

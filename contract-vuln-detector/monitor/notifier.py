@@ -158,8 +158,26 @@ class Notifier:
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
             output_name = f"monitor_{contract_name}_{event_type}_{ts}"
 
+            sev_counts = {}
+            for f in findings:
+                s = f.final_severity if hasattr(f, 'final_severity') else f.severity.value
+                sev_counts[s] = sev_counts.get(s, 0) + 1
+
+            if sev_counts.get("critical"):
+                overall_risk = "critical"
+            elif sev_counts.get("high"):
+                overall_risk = "high"
+            elif sev_counts.get("medium"):
+                overall_risk = "medium"
+            elif sev_counts.get("low"):
+                overall_risk = "low"
+            elif sev_counts:
+                overall_risk = "info"
+            else:
+                overall_risk = "info"
+
             batch_summary = {
-                "overall_risk": "unknown",
+                "overall_risk": overall_risk,
                 "summary": f"Monitor-triggered scan ({event_type})",
                 "critical_issues": [],
                 "recommendations_priority": [],

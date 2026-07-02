@@ -274,6 +274,12 @@ class PatternScanner(BaseScanner):
                         if any(kw in line for kw in ["public", "external", "internal", "private"]):
                             continue
 
+                    # Skip tx-origin-auth for EOA checks (msg.sender ==/!= tx.origin)
+                    if vuln_type == "tx-origin-auth":
+                        if re.search(r'msg\.sender\s*[!=]=\s*tx\.origin', line) or \
+                           re.search(r'tx\.origin\s*[!=]=\s*msg\.sender', line):
+                            continue
+
                     snippet = self._extract_snippet(source_code, line_num)
                     func_name = self._find_enclosing_function(lines, line_num)
 
