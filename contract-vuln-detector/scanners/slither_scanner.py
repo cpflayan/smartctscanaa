@@ -4,6 +4,8 @@ Wraps Slither's Python API for static analysis of Solidity contracts.
 """
 
 import os
+import re
+import subprocess
 import tempfile
 import logging
 from typing import Optional
@@ -90,6 +92,8 @@ class SlitherScanner(BaseScanner):
             )
             return self._fallback_scan(source_code, file_path)
 
+        solc_path = self._ensure_solc_version(source_code)
+
         # Write source to a temp file for Slither to process
         tmp_dir = tempfile.mkdtemp(prefix="slither_scan_")
         sol_file = os.path.join(tmp_dir, os.path.basename(file_path) if file_path != "<unknown>" else "contract.sol")
@@ -102,8 +106,9 @@ class SlitherScanner(BaseScanner):
 
             # Initialize Slither
             slither_kwargs = {}
-            if self._solc_path:
-                slither_kwargs["solc"] = self._solc_path
+            effective_solc = solc_path or self._solc_path
+            if effective_solc:
+                slither_kwargs["solc"] = effective_solc
 
             sl = Slither(sol_file, **slither_kwargs)
             findings = []
@@ -157,6 +162,32 @@ class SlitherScanner(BaseScanner):
                 os.rmdir(tmp_dir)
             except OSError:
                 pass
+
+    def _ensure_solc_version(self, source_code: str) -> Optional[str]:
+        """Extract pragma version from source and ensure correct solc is available via solc-select."""
+        match = re.search(r'pragma\s+solidity\s+[\^>=<]*\s*(\d+\.\d+\.\d+)', source_code)
+        if not match:
+            return None
+
+        required_version = match.group(1)
+
+        try:
+            result = subprocess.run(
+                ["solc-select", "install", required_version],
+                capture_output=True, text=True, timeout=30,
+            )
+            subprocess.run(
+                ["solc-select", "use", required_version],
+                capture_output=True, text=True, timeout=10,
+            )
+            solc_path = os.path.expanduser(f"~/.solc-select/artifacts/solc-{required_version}/solc-{required_version}")
+            if os.path.exists(solc_path):
+                logger.info(f"Switched solc to {required_version} for compilation")
+                return solc_path
+        except Exception as e:
+            logger.debug(f"solc-select switch to {required_version} failed: {e}")
+
+        return None
 
     def _parse_slither_result(self, result, file_path: str, source_code: str) -> Optional[Finding]:
         """Convert a Slither result dict to a Finding."""
