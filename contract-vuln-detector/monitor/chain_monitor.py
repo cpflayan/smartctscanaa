@@ -81,6 +81,8 @@ class ChainMonitor:
         self._tx_scan_chains: list[str] = []
         self._tx_scanned_contracts: set[str] = set()
 
+    _POA_CHAINS = {"bsc", "avalanche", "base"}
+
     def _get_web3(self, chain: str) -> Optional[object]:
         """Get or create a Web3 instance for the given chain."""
         if chain in self._web3_cache:
@@ -95,6 +97,11 @@ class ChainMonitor:
         try:
             from web3 import Web3
             w3 = Web3(Web3.HTTPProvider(rpc_url, request_kwargs={"timeout": 15}))
+
+            if chain in self._POA_CHAINS:
+                from web3.middleware import ExtraDataToPOAMiddleware
+                w3.middleware_onion.inject(ExtraDataToPOAMiddleware, layer=0)
+
             self._web3_cache[chain] = w3
             return w3
         except Exception as e:
