@@ -27,10 +27,11 @@ class EVMFetcher:
     # Rate limit: 5 requests/sec for free tier
     MIN_REQUEST_INTERVAL = 0.25
 
-    def __init__(self, explorer_api: str, api_key: str = "", rpc_url: str = ""):
+    def __init__(self, explorer_api: str, api_key: str = "", rpc_url: str = "", chainid: int = 0):
         self.explorer_api = explorer_api.rstrip("/")
         self.api_key = api_key
         self.rpc_url = rpc_url
+        self.chainid = chainid
         self._last_request_time = 0.0
 
     def fetch(self, address: str) -> tuple[Optional[str], dict]:
@@ -56,6 +57,8 @@ class EVMFetcher:
             "action": "getsourcecode",
             "address": address,
         }
+        if self.chainid:
+            params["chainid"] = self.chainid
         if self.api_key:
             params["apikey"] = self.api_key
 

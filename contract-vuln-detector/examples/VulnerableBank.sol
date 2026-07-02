@@ -37,8 +37,8 @@ contract VulnerableBank {
     }
 
     // Vulnerability: unchecked send
-    function refundUser(address user, uint256 amount) public {
-        balances[user].send(amount);
+    function refundUser(address payable user, uint256 amount) public {
+        user.send(amount);
     }
 
     // Vulnerability: block.timestamp dependence
@@ -70,9 +70,9 @@ contract VulnerableBank {
         owner = newOwner;
     }
 
-    // Vulnerability: sha3 deprecated
+    // Vulnerability: deprecated hash function usage (sha3 → keccak256)
     function hashData(bytes memory data) public pure returns (bytes32) {
-        return sha3(data);
+        return keccak256(data);
     }
 
     // Vulnerability: integer overflow (pre-0.8.0)

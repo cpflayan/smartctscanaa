@@ -42,6 +42,9 @@ from fetchers.multi_chain import MultiChainFetcher
 from analyzer.ai_analyzer import AIAnalyzer
 from analyzer.severity import SeverityScorer
 from reports.report_generator import ReportGenerator
+from monitor.notifier import Notifier
+from monitor.chain_monitor import ChainMonitor
+from monitor.file_monitor import FileMonitor
 
 # ─── Logging Setup ────────────────────────────────────────────────────────────────
 
@@ -384,6 +387,105 @@ def chains(ctx):
             f"(chain_id: {info['chain_id']}) "
             f"API key: {api_key_status}"
         )
+
+
+@cli.command()
+@click.option("--address", "-a", "addresses", multiple=True, help="Contract address to monitor (repeatable)")
+@click.option("--chain", "-c", "chains", multiple=True, help="Chain name(s) to monitor (repeatable, comma-separated). Default: ethereum")
+@click.option("--file-dir", "-d", "file_dirs", multiple=True, help="Local directory to watch for .sol changes (repeatable)")
+@click.option("--interval", type=int, default=None, help="Periodic re-scan interval in seconds")
+@click.option("--poll-interval", type=int, default=None, help="On-chain polling interval in seconds")
+@click.option("--modes", default="rescan,events,tx", help="Comma-separated monitor modes: rescan,events,tx,deploy")
+@click.option("--log-file", default=None, help="Path for monitor event log file")
+@click.option("--no-ai", is_flag=True, help="Skip AI analysis on triggered scans")
+@click.option("--output", "-o", default="./reports", help="Output directory for reports")
+@click.pass_context
+def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log_file, no_ai, output):
+    """Monitor on-chain contracts and local files for changes, events, and new deployments."""
+
+    config = ctx.obj["config"]
+
+    # Parse chains: support comma-separated values and multiple flags
+    chain_list = []
+    for c in chains:
+        chain_list.extend(s.strip() for s in c.split(",") if s.strip())
+    if not chain_list:
+        chain_list = ["ethereum"]
+
+    # Apply CLI overrides to monitor config
+    monitor_cfg = config.setdefault("monitor", {})
+    if interval is not None:
+        monitor_cfg["interval"] = interval
+    if poll_interval is not None:
+        monitor_cfg["poll_interval"] = poll_interval
+    if log_file is None:
+        log_file = monitor_cfg.get("log_file", os.path.join(output, "monitor.log"))
+
+    mode_list = [m.strip() for m in modes.split(",") if m.strip()]
+
+    if not addresses and not file_dirs and "deploy" not in mode_list:
+        click.echo("Error: Specify at least one --address, --file-dir, or use --modes deploy", err=True)
+        sys.exit(1)
+
+    # Build scan function
+    def scan_fn(source_code: str, file_path: str, cfg: dict) -> list[Finding]:
+        return run_scanners(source_code, file_path, cfg, parallel=True)
+
+    # Set up notifier
+    notifier = Notifier(config=config, output_dir=output, log_file=log_file)
+
+    click.echo("")
+    click.echo(click.style("=" * 60, bold=True))
+    click.echo(click.style("  Contract Vulnerability Monitor", bold=True))
+    click.echo(click.style("=" * 60, bold=True))
+    click.echo(f"  Chains:   {', '.join(chain_list)}")
+    click.echo(f"  Modes:    {', '.join(mode_list)}")
+    click.echo(f"  Interval: {monitor_cfg.get('interval', 300)}s (rescan)")
+    click.echo(f"  Poll:     {monitor_cfg.get('poll_interval', 12)}s (chain)")
+    click.echo(f"  Log:      {log_file}")
+    click.echo("")
+
+    # Start chain monitor
+    chain_monitor = None
+    need_chain = addresses or "deploy" in mode_list
+    if need_chain:
+        chain_config = config.get("chains", {})
+        chain_monitor = ChainMonitor(config, chain_config, notifier, scan_fn=scan_fn)
+
+        for addr in addresses:
+            addr_modes = mode_list.copy()
+            if "deploy" in addr_modes:
+                addr_modes.remove("deploy")
+            for ch in chain_list:
+                chain_monitor.watch_address(addr, chain=ch, modes=addr_modes)
+
+        if "deploy" in mode_list:
+            for ch in chain_list:
+                chain_monitor.watch_deployments(chain=ch)
+
+        chain_monitor.start()
+
+    # Start file monitor
+    file_monitor = None
+    if file_dirs:
+        file_monitor = FileMonitor(config, notifier, scan_fn=scan_fn)
+        for d in file_dirs:
+            file_monitor.watch_directory(d)
+        file_monitor.start()
+
+    click.echo("")
+    click.echo("Press Ctrl+C to stop monitoring.")
+    click.echo("")
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        click.echo("")
+        if chain_monitor:
+            chain_monitor.stop()
+        if file_monitor:
+            file_monitor.stop()
 
 
 if __name__ == "__main__":

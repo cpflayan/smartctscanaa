@@ -96,7 +96,7 @@ class MythrilScanner(BaseScanner):
                 "--strategy", self.strategy,
                 "--max-depth", str(self.max_depth),
                 "-o", "json",
-                "-f", json_out,
+                "-j", json_out,
             ]
 
             proc = subprocess.run(

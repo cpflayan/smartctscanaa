@@ -108,19 +108,37 @@ class SlitherScanner(BaseScanner):
             sl = Slither(sol_file, **slither_kwargs)
             findings = []
 
-            # Run detectors
-            detectors = sl.detectors
+            # Register detectors (slither 0.11.5+ requires explicit registration)
+            from slither.detectors import all_detectors as _all_detectors
+
+            detector_classes = [
+                getattr(_all_detectors, name)
+                for name in dir(_all_detectors)
+                if not name.startswith("_")
+                and isinstance(getattr(_all_detectors, name), type)
+            ]
+
+            # Map ARGUMENT -> class for filtering
+            arg_to_class = {cls.ARGUMENT: cls for cls in detector_classes if hasattr(cls, "ARGUMENT")}
+
             if self._detectors:
-                detectors = [d for d in detectors if d.ARGUMENT in self._detectors]
+                selected = [arg_to_class[d] for d in self._detectors if d in arg_to_class]
+            else:
+                selected = detector_classes
 
-            for detector in detectors:
+            for cls in selected:
                 try:
-                    results = detector.detect()
+                    sl.register_detector(cls)
                 except Exception as e:
-                    logger.warning(f"Detector {detector.ARGUMENT} failed: {e}")
-                    continue
+                    logger.debug(f"Failed to register detector {cls}: {e}")
 
-                for result in results:
+            # run_detectors returns list[list[dict]]
+            all_results = sl.run_detectors()
+
+            for result_list in all_results:
+                if not isinstance(result_list, list):
+                    continue
+                for result in result_list:
                     finding = self._parse_slither_result(result, file_path, source_code)
                     if finding:
                         findings.append(finding)
