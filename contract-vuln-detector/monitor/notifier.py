@@ -23,6 +23,9 @@ EVENT_LABELS = {
     "new_contract": "新合約部署",
     "file_changed": "本地檔案變更",
     "scan_complete": "掃描完成",
+    "whitelist_added": "已加入白名單",
+    "whitelist_skipped": "白名單跳過",
+    "tx_deep_scan": "交易觸發深度掃描",
 }
 
 SEVERITY_COLORS = {

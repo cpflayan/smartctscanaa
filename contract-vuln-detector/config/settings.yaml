@@ -94,6 +94,12 @@ monitor:
     - tx
     - deploy
 
+# Whitelist Configuration
+whitelist:
+  auto_add: true                # Auto-add contracts after clean scan
+  auto_add_max_severity: "low"  # Max severity to auto-whitelist (info/low = clean only)
+  filepath: "./reports/whitelist.json"
+
 # Severity Levels
 severity:
   levels:

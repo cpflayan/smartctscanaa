@@ -45,6 +45,7 @@ from reports.report_generator import ReportGenerator
 from monitor.notifier import Notifier
 from monitor.chain_monitor import ChainMonitor
 from monitor.file_monitor import FileMonitor
+from monitor.whitelist import Whitelist
 
 # ─── Logging Setup ────────────────────────────────────────────────────────────────
 
@@ -395,12 +396,14 @@ def chains(ctx):
 @click.option("--file-dir", "-d", "file_dirs", multiple=True, help="Local directory to watch for .sol changes (repeatable)")
 @click.option("--interval", type=int, default=None, help="Periodic re-scan interval in seconds")
 @click.option("--poll-interval", type=int, default=None, help="On-chain polling interval in seconds")
-@click.option("--modes", default="rescan,events,tx", help="Comma-separated monitor modes: rescan,events,tx,deploy")
+@click.option("--modes", default="rescan,events,tx", help="Comma-separated monitor modes: rescan,events,tx,deploy,txscan")
 @click.option("--log-file", default=None, help="Path for monitor event log file")
 @click.option("--no-ai", is_flag=True, help="Skip AI analysis on triggered scans")
 @click.option("--output", "-o", default="./reports", help="Output directory for reports")
+@click.option("--whitelist-file", default=None, help="Path to whitelist JSON file (default: ./reports/whitelist.json)")
+@click.option("--no-auto-whitelist", is_flag=True, help="Disable auto-whitelist after clean scan")
 @click.pass_context
-def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log_file, no_ai, output):
+def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log_file, no_ai, output, whitelist_file, no_auto_whitelist):
     """Monitor on-chain contracts and local files for changes, events, and new deployments."""
 
     config = ctx.obj["config"]
@@ -423,9 +426,16 @@ def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log
 
     mode_list = [m.strip() for m in modes.split(",") if m.strip()]
 
-    if not addresses and not file_dirs and "deploy" not in mode_list:
-        click.echo("Error: Specify at least one --address, --file-dir, or use --modes deploy", err=True)
+    chain_modes = {"deploy", "txscan"}
+    if not addresses and not file_dirs and not chain_modes.intersection(mode_list):
+        click.echo("Error: Specify at least one --address, --file-dir, or use --modes deploy/txscan", err=True)
         sys.exit(1)
+
+    # Set up whitelist
+    wl_path = whitelist_file or os.path.join(output, "whitelist.json")
+    whitelist = Whitelist(filepath=wl_path)
+    if no_auto_whitelist:
+        config.setdefault("whitelist", {})["auto_add"] = False
 
     # Build scan function
     def scan_fn(source_code: str, file_path: str, cfg: dict) -> list[Finding]:
@@ -438,30 +448,38 @@ def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log
     click.echo(click.style("=" * 60, bold=True))
     click.echo(click.style("  Contract Vulnerability Monitor", bold=True))
     click.echo(click.style("=" * 60, bold=True))
-    click.echo(f"  Chains:   {', '.join(chain_list)}")
-    click.echo(f"  Modes:    {', '.join(mode_list)}")
-    click.echo(f"  Interval: {monitor_cfg.get('interval', 300)}s (rescan)")
-    click.echo(f"  Poll:     {monitor_cfg.get('poll_interval', 12)}s (chain)")
-    click.echo(f"  Log:      {log_file}")
+    click.echo(f"  Chains:      {', '.join(chain_list)}")
+    click.echo(f"  Modes:       {', '.join(mode_list)}")
+    click.echo(f"  Interval:    {monitor_cfg.get('interval', 300)}s (rescan)")
+    click.echo(f"  Poll:        {monitor_cfg.get('poll_interval', 12)}s (chain)")
+    click.echo(f"  Log:         {log_file}")
+    click.echo(f"  Whitelist:   {wl_path} ({whitelist.count()} entries)")
+    auto_wl = config.get("whitelist", {}).get("auto_add", True)
+    click.echo(f"  Auto-WL:     {'on' if auto_wl else 'off'}")
     click.echo("")
 
     # Start chain monitor
     chain_monitor = None
-    need_chain = addresses or "deploy" in mode_list
+    need_chain = addresses or chain_modes.intersection(mode_list)
     if need_chain:
         chain_config = config.get("chains", {})
-        chain_monitor = ChainMonitor(config, chain_config, notifier, scan_fn=scan_fn)
+        chain_monitor = ChainMonitor(
+            config, chain_config, notifier,
+            scan_fn=scan_fn, whitelist=whitelist,
+        )
 
         for addr in addresses:
-            addr_modes = mode_list.copy()
-            if "deploy" in addr_modes:
-                addr_modes.remove("deploy")
+            addr_modes = [m for m in mode_list if m not in chain_modes]
             for ch in chain_list:
                 chain_monitor.watch_address(addr, chain=ch, modes=addr_modes)
 
         if "deploy" in mode_list:
             for ch in chain_list:
                 chain_monitor.watch_deployments(chain=ch)
+
+        if "txscan" in mode_list:
+            for ch in chain_list:
+                chain_monitor.watch_tx_scans(chain=ch)
 
         chain_monitor.start()
 
@@ -486,6 +504,86 @@ def watch(ctx, addresses, chains, file_dirs, interval, poll_interval, modes, log
             chain_monitor.stop()
         if file_monitor:
             file_monitor.stop()
+
+
+# ─── Whitelist CLI ────────────────────────────────────────────────────────────────
+
+@cli.group()
+def whitelist():
+    """Manage the contract whitelist."""
+    pass
+
+
+@whitelist.command("list")
+@click.option("--chain", default=None, help="Filter by chain name")
+@click.option("--output", "-o", default="./reports", help="Reports directory")
+@click.pass_context
+def whitelist_list(ctx, chain, output):
+    """List all whitelisted contracts."""
+    wl_path = os.path.join(output, "whitelist.json")
+    wl = Whitelist(filepath=wl_path)
+    entries = wl.list_all(chain=chain)
+
+    if not entries:
+        click.echo("Whitelist is empty.")
+        return
+
+    click.echo(f"Whitelist ({len(entries)} entries):")
+    click.echo("")
+    for e in entries:
+        click.echo(
+            f"  [{e['chain']}] {e['address']}  "
+            f"({e.get('contract_name', '?')})  "
+            f"added: {e.get('added_at', '?')[:10]}  "
+            f"reason: {e.get('reason', '?')}"
+        )
+
+
+@whitelist.command("add")
+@click.option("--address", "-a", required=True, help="Contract address")
+@click.option("--chain", default="ethereum", help="Chain name")
+@click.option("--reason", default="manual", help="Reason for whitelisting")
+@click.option("--output", "-o", default="./reports", help="Reports directory")
+def whitelist_add(address, chain, reason, output):
+    """Manually add a contract to the whitelist."""
+    wl_path = os.path.join(output, "whitelist.json")
+    wl = Whitelist(filepath=wl_path)
+    added = wl.add(address, chain, reason=reason)
+    if added:
+        click.echo(click.style(f"Added: {address} on {chain}", fg="green"))
+    else:
+        click.echo(f"Already whitelisted: {address} on {chain}")
+
+
+@whitelist.command("remove")
+@click.option("--address", "-a", required=True, help="Contract address")
+@click.option("--chain", default="ethereum", help="Chain name")
+@click.option("--output", "-o", default="./reports", help="Reports directory")
+def whitelist_remove(address, chain, output):
+    """Remove a contract from the whitelist."""
+    wl_path = os.path.join(output, "whitelist.json")
+    wl = Whitelist(filepath=wl_path)
+    removed = wl.remove(address, chain)
+    if removed:
+        click.echo(click.style(f"Removed: {address} on {chain}", fg="yellow"))
+    else:
+        click.echo(f"Not in whitelist: {address} on {chain}")
+
+
+@whitelist.command("clear")
+@click.option("--chain", default=None, help="Only clear entries for this chain")
+@click.option("--output", "-o", default="./reports", help="Reports directory")
+@click.confirmation_option(prompt="Are you sure you want to clear the whitelist?")
+def whitelist_clear(chain, output):
+    """Clear all entries from the whitelist."""
+    wl_path = os.path.join(output, "whitelist.json")
+    wl = Whitelist(filepath=wl_path)
+    count = wl.count()
+    wl.clear(chain=chain)
+    if chain:
+        click.echo(f"Cleared {chain} entries from whitelist.")
+    else:
+        click.echo(f"Cleared all {count} entries from whitelist.")
 
 
 if __name__ == "__main__":

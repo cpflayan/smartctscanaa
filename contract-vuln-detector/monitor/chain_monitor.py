@@ -14,7 +14,8 @@ import click
 
 from fetchers.multi_chain import MultiChainFetcher
 from monitor.notifier import Notifier
-from scanners.base_scanner import Finding
+from monitor.whitelist import Whitelist
+from scanners.base_scanner import Finding, Severity
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,7 @@ class ChainMonitor:
         chain_config: dict,
         notifier: Notifier,
         scan_fn=None,
+        whitelist: Whitelist = None,
     ):
         """
         Args:
@@ -47,15 +49,23 @@ class ChainMonitor:
             notifier: Notifier instance for alerts.
             scan_fn: Callable(source_code, file_path, config) -> list[Finding].
                      If None, uses a default that runs pattern scanner only.
+            whitelist: Whitelist instance. If None, whitelist is disabled.
         """
         self.config = config
         self.chain_config = chain_config
         self.notifier = notifier
         self.scan_fn = scan_fn or self._default_scan
+        self.whitelist = whitelist
 
         monitor_cfg = config.get("monitor", {})
         self.rescan_interval = monitor_cfg.get("interval", 300)
         self.poll_interval = monitor_cfg.get("poll_interval", 12)
+
+        wl_cfg = config.get("whitelist", {})
+        self.auto_whitelist = wl_cfg.get("auto_add", True)
+        self.auto_whitelist_max_severity = Severity.from_str(
+            wl_cfg.get("auto_add_max_severity", "low")
+        )
 
         self.fetcher = MultiChainFetcher(chain_config)
         self._web3_cache: dict[str, Web3] = {}
@@ -68,6 +78,8 @@ class ChainMonitor:
 
         self._watched: list[dict] = []
         self._deploy_chains: list[str] = []
+        self._tx_scan_chains: list[str] = []
+        self._tx_scanned_contracts: set[str] = set()
 
     def _get_web3(self, chain: str) -> Optional[object]:
         """Get or create a Web3 instance for the given chain."""
@@ -112,6 +124,11 @@ class ChainMonitor:
         if chain not in self._deploy_chains:
             self._deploy_chains.append(chain)
 
+    def watch_tx_scans(self, chain: str = "ethereum"):
+        """Register a chain to deep-scan contracts involved in transactions."""
+        if chain not in self._tx_scan_chains:
+            self._tx_scan_chains.append(chain)
+
     def start(self):
         """Start all monitoring threads."""
         self._stop_event.clear()
@@ -154,6 +171,15 @@ class ChainMonitor:
                 args=(chain,),
                 daemon=True,
                 name=f"deploy-{chain}",
+            )
+            self._threads.append(t)
+
+        for chain in self._tx_scan_chains:
+            t = threading.Thread(
+                target=self._tx_scan_monitor_loop,
+                args=(chain,),
+                daemon=True,
+                name=f"txscan-{chain}",
             )
             self._threads.append(t)
 
@@ -204,7 +230,7 @@ class ChainMonitor:
                             f"Initial scan: {address} on {chain} ({metadata.get('contract_name', '?')})",
                             contract_info=metadata,
                         )
-                        self._run_scan(source, address, metadata)
+                        self._run_scan(source, address, metadata, chain=chain)
                     elif source_hash != prev_hash:
                         self._source_hashes[key] = source_hash
                         self.notifier.notify(
@@ -212,7 +238,7 @@ class ChainMonitor:
                             f"Source changed: {address} on {chain} ({metadata.get('contract_name', '?')})",
                             contract_info=metadata,
                         )
-                        self._run_scan(source, address, metadata)
+                        self._run_scan(source, address, metadata, chain=chain)
                     else:
                         logger.debug(f"Rescan: no change for {address}")
 
@@ -387,14 +413,97 @@ class ChainMonitor:
             source, metadata = self.fetcher.fetch(contract_address, chain=chain)
             if source:
                 metadata["block_number"] = block_num
-                self._run_scan(source, contract_address, metadata)
+                self._run_scan(source, contract_address, metadata, chain=chain)
         except Exception as e:
             logger.debug(f"Cannot scan new contract: {e}")
 
+    # ─── TX Deep Scan Monitor ─────────────────────────────────────────────────
+
+    def _tx_scan_monitor_loop(self, chain: str):
+        """Monitor all transactions on a chain. Deep-scan contracts involved in txs."""
+        w3 = self._get_web3(chain)
+        if not w3:
+            return
+
+        click.echo(f"  [txscan] Deep-scanning contracts in txs on {chain}")
+
+        try:
+            last_block = w3.eth.block_number
+        except Exception as e:
+            logger.error(f"Cannot get initial block for {chain}: {e}")
+            return
+
+        while not self._stop_event.is_set():
+            try:
+                current_block = w3.eth.block_number
+                if current_block <= last_block:
+                    self._stop_event.wait(timeout=self.poll_interval)
+                    continue
+
+                for block_num in range(last_block + 1, current_block + 1):
+                    try:
+                        block = w3.eth.get_block(block_num, full_transactions=True)
+                    except Exception:
+                        continue
+
+                    for tx in block.get("transactions", []):
+                        tx_to = tx.get("to")
+                        if not tx_to:
+                            continue
+
+                        addr_lower = tx_to.lower()
+                        dedup_key = f"{chain}:{addr_lower}"
+                        if dedup_key in self._tx_scanned_contracts:
+                            continue
+
+                        if self.whitelist and self.whitelist.is_whitelisted(tx_to, chain):
+                            continue
+
+                        self._tx_scanned_contracts.add(dedup_key)
+                        self._try_deep_scan_contract(tx_to, chain, block_num)
+
+                last_block = current_block
+
+            except Exception as e:
+                logger.warning(f"TX scan monitor error on {chain}: {e}")
+
+            self._stop_event.wait(timeout=self.poll_interval)
+
+    def _try_deep_scan_contract(self, address: str, chain: str, block_num: int):
+        """Fetch source and deep-scan a contract found via transaction monitoring."""
+        try:
+            source, metadata = self.fetcher.fetch(address, chain=chain)
+            if not source:
+                return
+
+            metadata["block_number"] = block_num
+            contract_name = metadata.get("contract_name", "unknown")
+
+            self.notifier.notify(
+                "tx_deep_scan",
+                f"Deep scanning {address} ({contract_name}) on {chain} (block={block_num})",
+                contract_info=metadata,
+                severity="info",
+            )
+
+            self._run_scan(source, address, metadata, chain=chain)
+
+        except Exception as e:
+            logger.debug(f"Cannot deep-scan contract {address}: {e}")
+
     # ─── Scan Helper ──────────────────────────────────────────────────────────
 
-    def _run_scan(self, source_code: str, address: str, metadata: dict):
-        """Run scanners on source code and notify with findings."""
+    def _run_scan(self, source_code: str, address: str, metadata: dict, chain: str = None):
+        """Run scanners on source code and notify with findings. Auto-whitelist on clean scan."""
+        if chain and self.whitelist and self.whitelist.is_whitelisted(address, chain):
+            self.notifier.notify(
+                "whitelist_skipped",
+                f"Skipped (whitelisted): {address} on {chain}",
+                contract_info=metadata,
+                severity="info",
+            )
+            return
+
         try:
             findings = self.scan_fn(source_code, address, self.config)
             if findings:
@@ -406,6 +515,7 @@ class ChainMonitor:
                     contract_info=metadata,
                     severity=max_sev.value,
                 )
+                self._maybe_whitelist(address, chain, metadata, findings, max_sev)
             else:
                 self.notifier.notify(
                     "scan_complete",
@@ -413,8 +523,45 @@ class ChainMonitor:
                     contract_info=metadata,
                     severity="info",
                 )
+                self._auto_whitelist(address, chain, metadata, findings=[])
         except Exception as e:
             logger.warning(f"Scan failed for {address}: {e}")
+
+    def _maybe_whitelist(self, address: str, chain: str, metadata: dict, findings: list, max_sev):
+        """Auto-whitelist if max severity is within threshold."""
+        if not chain or not self.whitelist or not self.auto_whitelist:
+            return
+        if max_sev <= self.auto_whitelist_max_severity:
+            self._auto_whitelist(address, chain, metadata, findings)
+
+    def _auto_whitelist(self, address: str, chain: str, metadata: dict, findings: list = None):
+        """Add contract to whitelist and notify."""
+        if not chain or not self.whitelist or not self.auto_whitelist:
+            return
+
+        summary = {}
+        if findings:
+            by_sev = {}
+            for f in findings:
+                by_sev[f.severity.value] = by_sev.get(f.severity.value, 0) + 1
+            summary = {"total": len(findings), "by_severity": by_sev}
+        else:
+            summary = {"total": 0}
+
+        added = self.whitelist.add(
+            address=address,
+            chain=chain,
+            reason="clean_scan" if not findings else "within_threshold",
+            scan_summary=summary,
+            contract_name=metadata.get("contract_name"),
+        )
+        if added:
+            self.notifier.notify(
+                "whitelist_added",
+                f"Auto-whitelisted: {address} ({metadata.get('contract_name', '?')}) on {chain} - {summary.get('total', 0)} finding(s)",
+                contract_info=metadata,
+                severity="info",
+            )
 
     @staticmethod
     def _default_scan(source_code: str, file_path: str, config: dict) -> list[Finding]:
