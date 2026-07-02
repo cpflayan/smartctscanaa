@@ -1,0 +1,96 @@
+# Contract Vulnerability Detector - Configuration
+
+# LLM API Configuration
+llm:
+  provider: "openai"  # openai | ollama | azure
+  api_key: "${OPENAI_API_KEY}"  # Use environment variable
+  model: "gpt-4"
+  base_url: null  # Custom endpoint for ollama/azure
+  temperature: 0.1
+  max_tokens: 4096
+
+# Scanner Configuration
+scanners:
+  slither:
+    enabled: true
+    timeout: 300  # seconds
+    detectors:
+      - reentrancy-eth
+      - reentrancy-no-eth
+      - unchecked-lowlevel
+      - unchecked-send
+      - suicidal
+      - arbitrary-send-eth
+      - arbitrary-send-erc20
+      - tx-origin
+      - controlled-delegatecall
+      - shadowing-state
+      - locked-ether
+      - missing-zero-check
+
+  mythril:
+    enabled: true
+    timeout: 600  # seconds
+    execution_timeout: 300
+    strategy: "bfs"
+    max_depth: 100
+
+  pattern:
+    enabled: true
+    custom_rules_file: null  # Path to custom rules YAML
+
+# Multi-chain Configuration
+chains:
+  ethereum:
+    chain_id: 1
+    explorer_api: "https://api.etherscan.io/api"
+    explorer_key: "${ETHERSCAN_API_KEY}"
+    rpc_url: "https://eth.llamarpc.com"
+
+  bsc:
+    chain_id: 56
+    explorer_api: "https://api.bscscan.com/api"
+    explorer_key: "${BSCSCAN_API_KEY}"
+    rpc_url: "https://bsc-dataseed.binance.org"
+
+  polygon:
+    chain_id: 137
+    explorer_api: "https://api.polygonscan.com/api"
+    explorer_key: "${POLYGONSCAN_API_KEY}"
+    rpc_url: "https://polygon-rpc.com"
+
+  arbitrum:
+    chain_id: 42161
+    explorer_api: "https://api.arbiscan.io/api"
+    explorer_key: "${ARBISCAN_API_KEY}"
+    rpc_url: "https://arb1.arbitrum.io/rpc"
+
+  optimism:
+    chain_id: 10
+    explorer_api: "https://api-optimistic.etherscan.io/api"
+    explorer_key: "${OPTIMISM_API_KEY}"
+    rpc_url: "https://mainnet.optimism.io"
+
+# Report Configuration
+reports:
+  output_dir: "./reports"
+  formats:
+    - json
+    - markdown
+  include_code_snippets: true
+  max_snippet_lines: 20
+
+# Severity Levels
+severity:
+  levels:
+    - critical
+    - high
+    - medium
+    - low
+    - info
+  colors:
+    critical: "#FF0000"
+    high: "#FF6600"
+    medium: "#FFCC00"
+    low: "#00CC00"
+    info: "#0066CC"

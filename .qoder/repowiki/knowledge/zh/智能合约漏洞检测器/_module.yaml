@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: ""
+title: 智能合约漏洞检测器
+scope:
+    - contract-vuln-detector/
+source_files: []
+depends_on: []
+related_to: []

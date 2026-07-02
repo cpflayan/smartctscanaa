@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: logging_system
+title: 基于标准 logging 模块的集中式日志系统
+scope: []
+source_files:
+    - contract-vuln-detector/main.py
+    - contract-vuln-detector/analyzer/ai_analyzer.py
+    - contract-vuln-detector/fetchers/evm_fetcher.py
+    - contract-vuln-detector/scanners/slither_scanner.py
+    - contract-vuln-detector/fetchers/multi_chain.py
+depends_on: []
+related_to: []

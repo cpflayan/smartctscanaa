@@ -1,0 +1,67 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: Q0DeR-MaG1C-BrAnCh-Fo2-NoN-GiT-Or-No-C0MmIt
+nodes_managed: true
+exported_at: "2026-06-25T20:45:42Z"
+modules:
+    "":
+        dir_name: 智能合约漏洞检测器
+        title: 智能合约漏洞检测器
+        scope:
+            - contract-vuln-detector/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    configuration_system:
+        dir_name: 基于 YAML 与 CLI 参数的分层配置系统
+        title: 基于 YAML 与 CLI 参数的分层配置系统
+        scope: []
+        source_files:
+            - contract-vuln-detector/config/settings.yaml
+            - contract-vuln-detector/main.py
+            - contract-vuln-detector/fetchers/multi_chain.py
+            - contract-vuln-detector/analyzer/ai_analyzer.py
+        children: []
+        depends_on: []
+        related_to: []
+    dependency_management:
+        dir_name: Python依赖管理与配置
+        title: Python依赖管理与配置
+        scope: []
+        source_files:
+            - contract-vuln-detector/requirements.txt
+            - contract-vuln-detector/config/settings.yaml
+            - contract-vuln-detector/main.py
+        children: []
+        depends_on: []
+        related_to: []
+    error_handling:
+        dir_name: 错误处理机制：基于日志的容错与异常隔离
+        title: 错误处理机制：基于日志的容错与异常隔离
+        scope: []
+        source_files:
+            - contract-vuln-detector/main.py
+            - contract-vuln-detector/scanners/base_scanner.py
+            - contract-vuln-detector/scanners/slither_scanner.py
+            - contract-vuln-detector/scanners/mythril_scanner.py
+            - contract-vuln-detector/analyzer/ai_analyzer.py
+            - contract-vuln-detector/fetchers/evm_fetcher.py
+            - contract-vuln-detector/fetchers/multi_chain.py
+        children: []
+        depends_on: []
+        related_to: []
+    logging_system:
+        dir_name: 基于标准 logging 模块的集中式日志系统
+        title: 基于标准 logging 模块的集中式日志系统
+        scope: []
+        source_files:
+            - contract-vuln-detector/main.py
+            - contract-vuln-detector/analyzer/ai_analyzer.py
+            - contract-vuln-detector/fetchers/evm_fetcher.py
+            - contract-vuln-detector/scanners/slither_scanner.py
+            - contract-vuln-detector/fetchers/multi_chain.py
+        children: []
+        depends_on: []
+        related_to: []
